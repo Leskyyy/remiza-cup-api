@@ -145,10 +145,15 @@ public class MatchHistoryService {
         for (int i = 0; i < participantsArray.length(); i++) {
             JSONObject participant = participantsArray.getJSONObject(i);
             if (participant.getString("puuid").equals(puuid)) {
-                if (participant.getInt("nexusLost") == 1 || participant.getBoolean("gameEndedInEarlySurrender") || participant.getBoolean("gameEndedInSurrender")) {
-                    result = "LOSS";
-                } else {
+                int teamId = participant.getInt("teamId");
+                JSONArray teams = parsedResponse.getJSONObject("info").getJSONArray("teams");
+
+                if (teamId == 100 && teams.getJSONObject(0).getBoolean("win")) {
                     result = "WIN";
+                } else if (teamId == 200 && teams.getJSONObject(1).getBoolean("win")) {
+                    result = "WIN";
+                } else {
+                    result = "LOSS";
                 }
                 champion = participant.getString("championName");
                 kills = participant.getInt("kills");
