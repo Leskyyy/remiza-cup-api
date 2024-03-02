@@ -254,7 +254,7 @@ public class MatchHistoryService {
         }
 
         // concatenate the bestKda to the bestChampion
-        bestChampion = bestChampion + " " + bestKda;
+        bestChampion = bestChampion + " - " + returnFloatWith2Decimals(bestKda);
         return bestChampion;
     }
 
@@ -281,7 +281,7 @@ public class MatchHistoryService {
         }
 
         // concatenate the worstKda to the worstChampion
-        worstChampion = worstChampion + " " + worstKda;
+        worstChampion = worstChampion + " - " + returnFloatWith2Decimals(worstKda);
         return worstChampion;
     }
 
