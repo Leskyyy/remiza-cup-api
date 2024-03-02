@@ -243,7 +243,7 @@ public class MatchHistoryService {
         // only include champions with at least 5 games
         // kdaMap = kdaMap.entrySet().stream().filter(entry -> matches.stream().filter(match -> match.getChampion().equals(entry.getKey())).count() >= 5).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-        // find the best kda
+        // find the biggest winRate
         float bestKda = 0;
         String bestChampion = "";
         for (Map.Entry<String, float[]> entry : kdaMap.entrySet()) {
@@ -268,8 +268,8 @@ public class MatchHistoryService {
                 )
         );
 
-        // find the worst kda
-        float worstKda = Float.MAX_VALUE;
+        // find the worst winRate
+        float worstKda = 100;
         String worstChampion = "";
         for (Map.Entry<String, float[]> entry : kdaMap.entrySet()) {
             if (entry.getValue()[3] < worstKda) {
