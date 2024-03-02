@@ -219,8 +219,9 @@ public class MatchHistoryService {
         if (totalDeaths == 0) {
             return (float) (totalKills + totalAssists);
         }
-        // format kda to 2 decimal places
-        return (float) Math.round(((totalKills + totalAssists) / (float) totalDeaths) * 100) / 100;
+
+        float kda = (float) (totalKills + totalAssists) / totalDeaths;
+        return returnFloatWith2Decimals(kda);
     }
 
     public int countUniqueChampions(List<Match> matches) {
@@ -320,5 +321,10 @@ public class MatchHistoryService {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         JSONObject jsonObject = new JSONArray(response.body()).getJSONObject(0);
         return jsonObject.getString("tier") + " " + jsonObject.getString("rank") + " " + jsonObject.getInt("leaguePoints") + " LP";
+    }
+
+    public float returnFloatWith2Decimals(float num) {
+        int multiplier = (int) Math.pow(10, 2); // Multiply by 100 to shift decimal two places
+        return (float) (Math.round(num * multiplier) / (double) multiplier); // Round and divide back
     }
 }
