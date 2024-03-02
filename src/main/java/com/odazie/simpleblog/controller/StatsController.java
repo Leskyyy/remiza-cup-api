@@ -52,6 +52,10 @@ public class StatsController {
 
             MatchHistoryDetailsDto matchHistoryDetailsDto = getMatchHistoryDetailsDto(player.getPlayerName());
             statsTableDto = getStatsTableDto(player.getPlayerName(), leagueResponse, matchHistoryDetailsDto, player);
+            statsTableDto.setActualName(player.getActualName());
+            statsTableDto.setImageLink(player.getImageLink());
+            statsTableDto.setMainAccountDivision(player.getMainAccountDivision());
+            statsTableDto.setSumOfLp(calculateSumOfLp(leagueResponse));
             statsTableDtos.add(statsTableDto);
         }
 
@@ -112,5 +116,58 @@ public class StatsController {
                 .mostKills(matchHistoryService.findMostKills(matches))
                 .mostDeaths(matchHistoryService.findMostDeaths(matches))
                 .build();
+    }
+
+    private int calculateSumOfLp(LeagueV4ApiDto leagueResponse) {
+        // based on tier, rank and leaguePoints, calculate the sum of LP
+        int sumOfLp = 0;
+        switch (leagueResponse.getTier()) {
+            case "IRON":
+                sumOfLp = 0;
+                break;
+            case "BRONZE":
+                sumOfLp = 400;
+                break;
+            case "SILVER":
+                sumOfLp = 800;
+                break;
+            case "GOLD":
+                sumOfLp = 1200;
+                break;
+            case "PLATINUM":
+                sumOfLp = 1600;
+                break;
+            case "DIAMOND":
+                sumOfLp = 2000;
+                break;
+            case "MASTER":
+                sumOfLp = 2400;
+                break;
+            case "GRANDMASTER":
+                sumOfLp = 2800;
+                break;
+            case "CHALLENGER":
+                sumOfLp = 3200;
+                break;
+        }
+
+        switch (leagueResponse.getRank()) {
+            case "IV":
+                sumOfLp += 0;
+                break;
+            case "III":
+                sumOfLp += 100;
+                break;
+            case "II":
+                sumOfLp += 200;
+                break;
+            case "I":
+                sumOfLp += 300;
+                break;
+        }
+
+        sumOfLp += leagueResponse.getLeaguePoints();
+
+        return sumOfLp;
     }
 }

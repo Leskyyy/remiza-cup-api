@@ -30,4 +30,8 @@ public class StatsTableDto {
     private String milestoneWeekSix;
     private String milestoneWeekSeven;
     private String milestoneWeekEight;
+    private String imageLink;
+    private String actualName;
+    private String mainAccountDivision;
+    private int sumOfLp;
 }

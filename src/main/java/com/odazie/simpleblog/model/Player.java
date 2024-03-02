@@ -20,6 +20,10 @@ public class Player {
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long playerId;
 
+    private String actualName;
+    private String mainAccountDivision;
+    private String imageLink;
+
     private String playerName;
 
     private String puuid;
