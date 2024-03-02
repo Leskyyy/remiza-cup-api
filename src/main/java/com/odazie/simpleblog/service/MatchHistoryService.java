@@ -219,7 +219,8 @@ public class MatchHistoryService {
         if (totalDeaths == 0) {
             return (float) (totalKills + totalAssists);
         }
-        return (float) (totalKills + totalAssists) / totalDeaths;
+        // format kda to 2 decimal places
+        return (float) Math.round(((totalKills + totalAssists) / (float) totalDeaths) * 100) / 100;
     }
 
     public int countUniqueChampions(List<Match> matches) {
