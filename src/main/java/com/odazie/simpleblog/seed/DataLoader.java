@@ -28,6 +28,7 @@ public class DataLoader implements CommandLineRunner {
             player1.setActualName("Trzcina");
             player1.setMainAccountDivision("Emerald 2 40LP");
             player1.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212758027573272638/blazej.png?ex=65f2ffed&is=65e08aed&hm=e09e4309ff4adfdccfe06b595c3031042e31297065dcd7bedfa0b90ecb4c4e0b&\";4;80;80)");
+            player1.setMilestoneWeekOne("Platinum 1 78LP");
             playerRepository.save(player1);
         }
 
@@ -61,6 +62,7 @@ public class DataLoader implements CommandLineRunner {
             player4.setActualName("Cwik");
             player4.setMainAccountDivision("Gold 1    40LP");
             player4.setImageLink("=IMAGE(\"https://media.discordapp.net/attachments/1212427418934050826/1213639460261068900/cwik.png?ex=65f634d3&is=65e3bfd3&hm=c30546d3788deed38a9923766c73fa2fc2713136f6530d35b4b3959fed645403&\";4;80;80)");
+            player4.setMilestoneWeekOne("Gold 1 75LP");
             playerRepository.save(player4);
         }
 
@@ -81,7 +83,7 @@ public class DataLoader implements CommandLineRunner {
             player6.setEncryptedAccountId("185TaW2xdIQrZI0PCoNmd84aFbcV8qhWiIY0g3SjdQcfRLJ2rikq-f-6ig");
             player6.setPuuid("73mxUPLKwlqFO83KbPvF5ekZp4aU6cnOLi9qkY9EEv7bUTScUlVKoaDTLHCGvKcteM9TwPpAnJKOUQ");
             player6.setActualName("Perl");
-            player6.setMainAccountDivision("Emerald 4 55 LP");
+            player6.setMainAccountDivision("Emerald 4 55LP");
             player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212806079877218366/perl.png?ex=65f32cae&is=65e0b7ae&hm=87b8682e30dd9a774ffcef5b0d314c2b2945bb3330ca92eaa0d03de0ab916e96&\";4;80;80)");
             playerRepository.save(player6);
         }
@@ -92,7 +94,7 @@ public class DataLoader implements CommandLineRunner {
             player6.setEncryptedAccountId("IRXzMGN7X5JUtwahfUKDSnfVuIrLSQL14LNtziUjG59-wV3PdVZ9S68vfA");
             player6.setPuuid("bu2jo58UCZp8gJ8kMFCgudiAJibkf1Pto1tVxqzu0GCSQgTPjlE-sPXGxDbrueIKxgGKvr_glrmzeA");
             player6.setActualName("Grześ");
-            player6.setMainAccountDivision("Platinum 1 62 LP");
+            player6.setMainAccountDivision("Platinum 1 62LP");
             player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212804846533615646/grzes.PNG?ex=65f32b88&is=65e0b688&hm=d8914671c37c64027f4bdce9b9fc11ee1ecab5a3489df1b0dfaa51f99a597ab1&\";4;80;80)");
             playerRepository.save(player6);
         }
