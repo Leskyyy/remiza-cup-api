@@ -63,5 +63,27 @@ public class DataLoader implements CommandLineRunner {
             player4.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212805272142086204/cwik.png?ex=65f32bed&is=65e0b6ed&hm=214280e287366265bb67c4563b02768e0d199f58b0ab1758db137a40e005a3db&\";4;80;80)");
             playerRepository.save(player4);
         }
+
+        if(playerRepository.findByPlayerName("Scarshannelli") == null) {
+            Player player5 = new Player();
+            player5.setPlayerName("Scarshannelli");
+            player5.setEncryptedAccountId("Dzxz6ZMCVKuZ3pIePV4U_aZTBYfGyiv7pEb4iAfTJ4aTUOHhnLhoO0Ml9g");
+            player5.setPuuid("136hrb7aOEkYA52yhamNl0Zj45hO_7SwxP7bvzXwYvVEPsPOB5RxomGsWiOVvXxWup_kptNsPfw5vQ");
+            player5.setActualName("Cwik");
+            player5.setMainAccountDivision("Gold 1    40LP");
+            player5.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212805272142086204/cwik.png?ex=65f32bed&is=65e0b6ed&hm=214280e287366265bb67c4563b02768e0d199f58b0ab1758db137a40e005a3db&\";4;130;130)");
+            playerRepository.save(player5);
+        }
+
+        if(playerRepository.findByPlayerName("Jeninaevanna") == null) {
+            Player player6 = new Player();
+            player6.setPlayerName("Jeninaevanna");
+            player6.setEncryptedAccountId("185TaW2xdIQrZI0PCoNmd84aFbcV8qhWiIY0g3SjdQcfRLJ2rikq-f-6ig");
+            player6.setPuuid("73mxUPLKwlqFO83KbPvF5ekZp4aU6cnOLi9qkY9EEv7bUTScUlVKoaDTLHCGvKcteM9TwPpAnJKOUQ");
+            player6.setActualName("Perl");
+            player6.setMainAccountDivision("Emerald 4 55 LP");
+            player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212806079877218366/perl.png?ex=65f32cae&is=65e0b7ae&hm=87b8682e30dd9a774ffcef5b0d314c2b2945bb3330ca92eaa0d03de0ab916e96&\";4;130;130)");
+            playerRepository.save(player6);
+        }
     }
 }
