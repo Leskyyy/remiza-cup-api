@@ -15,5 +15,7 @@ public interface MatchRepository extends JpaRepository<Match, String >
 
     Boolean existsByMatchIdAndSummonerName(long matchId, String summonerName);
 
+    List<Match> findBySummonerNameAndIgnore(String summonerName, boolean ignore);
+
     int countBySummonerName(String summonerName);
 }

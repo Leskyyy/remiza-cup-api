@@ -102,7 +102,7 @@ public class StatsController {
     }
 
     private MatchHistoryDetailsDto getMatchHistoryDetailsDto(String playerName) {
-        List<Match> matches = matchRepository.findBySummonerName(playerName);
+        List<Match> matches = matchRepository.findBySummonerNameAndIgnore(playerName, false);
 
         return MatchHistoryDetailsDto.builder()
                 .wins(matchHistoryService.countWins(matches))

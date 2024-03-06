@@ -28,7 +28,7 @@ public class DataLoader implements CommandLineRunner {
             player1.setActualName("Trzcina");
             player1.setMainAccountDivision("Emerald 2 40LP");
             player1.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212758027573272638/blazej.png?ex=65f2ffed&is=65e08aed&hm=e09e4309ff4adfdccfe06b595c3031042e31297065dcd7bedfa0b90ecb4c4e0b&\";4;80;80)");
-            player1.setMilestoneWeekOne("Platinum 1 78LP");
+            player1.setMilestoneWeekOne("PLATINUM I 78LP");
             playerRepository.save(player1);
         }
 
@@ -51,6 +51,7 @@ public class DataLoader implements CommandLineRunner {
             player3.setActualName("Trajkowski");
             player3.setMainAccountDivision("Master Tier 40LP");
             player3.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212758028089303081/trajek.png?ex=65f2ffed&is=65e08aed&hm=92b1d8d17d03b3aa7f7dc3748161f16c6bd3e06b03cffa59c9c16d7f30376f13&\";4;80;80)");
+            player3.setMilestoneWeekOne("PLATINUM III 72LP");
             playerRepository.save(player3);
         }
 
@@ -62,7 +63,7 @@ public class DataLoader implements CommandLineRunner {
             player4.setActualName("Cwik");
             player4.setMainAccountDivision("Gold 1    40LP");
             player4.setImageLink("=IMAGE(\"https://media.discordapp.net/attachments/1212427418934050826/1213639460261068900/cwik.png?ex=65f634d3&is=65e3bfd3&hm=c30546d3788deed38a9923766c73fa2fc2713136f6530d35b4b3959fed645403&\";4;80;80)");
-            player4.setMilestoneWeekOne("Gold 1 75LP");
+            player4.setMilestoneWeekOne("GOLD I 75LP");
             playerRepository.save(player4);
         }
 
@@ -97,6 +98,28 @@ public class DataLoader implements CommandLineRunner {
             player6.setMainAccountDivision("Platinum 1 62LP");
             player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212804846533615646/grzes.PNG?ex=65f32b88&is=65e0b688&hm=d8914671c37c64027f4bdce9b9fc11ee1ecab5a3489df1b0dfaa51f99a597ab1&\";4;80;80)");
             playerRepository.save(player6);
+        }
+
+        if(playerRepository.findByPlayerName("Kannistaris") == null) {
+            Player player6 = new Player();
+            player6.setPlayerName("Kannistaris");
+            player6.setEncryptedAccountId("Mn1DnsVzdMI5Jd4qwzd--3kjkf_blqy-x7maAO9WpOVhY6YCY9wUg5ch9Q");
+            player6.setPuuid("wCCvzeSvINKTUh02xmrESAsNhxIFGoeV0Kb4QcJLtQY9mDoAKdtvip3VpUWS-bq8yc-Ty9UO31myvw");
+            player6.setActualName("Gonzo");
+            player6.setMainAccountDivision("Diamond 4 42LP");
+            player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212757970232803368/gonzo.png?ex=65f2ffe0&is=65e08ae0&hm=84a3e644bc10c4e0134bf091853e947c64a4c898b5bcff733d8487885d4d4918&\";4;80;80)");
+            playerRepository.save(player6);
+        }
+
+        if(playerRepository.findByPlayerName("Harryntia") == null) {
+            Player player7 = new Player();
+            player7.setPlayerName("Harryntia");
+            player7.setEncryptedAccountId("Z6n9RIKRBBam3Rw4S_hLQAeHEeJqNzs4gw7_2UHTfsL-4iTlkxdxQ7V4kA");
+            player7.setPuuid("8jn6LUdVewnglHatm4UT7KPV0pBcQ23lHmk_nOEMxw78NngsvOHAJzGHPHUlgbLcEQRAFa9VEwdZcg");
+            player7.setActualName("Perl v2");
+            player7.setMainAccountDivision("Emerald 3 33LP");
+            player7.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1215053490267889774/obraz_2024-03-06_224817101-modified.png?ex=65fb59be&is=65e8e4be&hm=bbc53eb63ccd8208e4146502938ffec9f8cb17b36c65c510b5a3b994ad32f26d&\";4;80;80)");
+            playerRepository.save(player7);
         }
     }
 }
