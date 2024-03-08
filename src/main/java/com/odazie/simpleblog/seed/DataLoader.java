@@ -85,7 +85,7 @@ public class DataLoader implements CommandLineRunner {
             player6.setPuuid("73mxUPLKwlqFO83KbPvF5ekZp4aU6cnOLi9qkY9EEv7bUTScUlVKoaDTLHCGvKcteM9TwPpAnJKOUQ");
             player6.setActualName("Perl");
             player6.setMainAccountDivision("Emerald 4 55LP");
-            player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212806079877218366/perl.png?ex=65f32cae&is=65e0b7ae&hm=87b8682e30dd9a774ffcef5b0d314c2b2945bb3330ca92eaa0d03de0ab916e96&\";4;80;80)");
+            player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1215053490267889774/obraz_2024-03-06_224817101-modified.png?ex=65fb59be&is=65e8e4be&hm=bbc53eb63ccd8208e4146502938ffec9f8cb17b36c65c510b5a3b994ad32f26d&\";4;80;80)");
             playerRepository.save(player6);
         }
 
@@ -118,8 +118,19 @@ public class DataLoader implements CommandLineRunner {
             player7.setPuuid("8jn6LUdVewnglHatm4UT7KPV0pBcQ23lHmk_nOEMxw78NngsvOHAJzGHPHUlgbLcEQRAFa9VEwdZcg");
             player7.setActualName("Perl v2");
             player7.setMainAccountDivision("Emerald 3 33LP");
-            player7.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1215053490267889774/obraz_2024-03-06_224817101-modified.png?ex=65fb59be&is=65e8e4be&hm=bbc53eb63ccd8208e4146502938ffec9f8cb17b36c65c510b5a3b994ad32f26d&\";4;80;80)");
+            player7.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212806079877218366/perl.png?ex=65f32cae&is=65e0b7ae&hm=87b8682e30dd9a774ffcef5b0d314c2b2945bb3330ca92eaa0d03de0ab916e96&\";4;80;80)");
             playerRepository.save(player7);
+        }
+
+        if(playerRepository.findByPlayerName("Rshioryphiana") == null) {
+            Player player8 = new Player();
+            player8.setPlayerName("Rshioryphiana");
+            player8.setEncryptedAccountId("StjGDD8O2BlSQUlG82nkL5WAoIYXmj96U5efUWo7I6hLRmvq2ejJJTbeog");
+            player8.setPuuid("Rpj25UZx_DlnG9ywT7phMt3Th_iwwlgtBJyByuetFjzZniDULRk411_DKjhWYtAiUSCaWQvuDiFy3A");
+            player8.setActualName("Jakub");
+            player8.setMainAccountDivision("Emerald 4 48LP");
+            player8.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212757969939464252/jakub.png?ex=65f2ffdf&is=65e08adf&hm=3242a5a84b3696f52663fd91a8722bfc3588b9680de26d96b906cfca582411f3&\";4;80;80)");
+            playerRepository.save(player8);
         }
     }
 }

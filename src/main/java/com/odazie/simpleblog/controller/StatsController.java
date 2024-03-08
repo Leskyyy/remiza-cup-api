@@ -43,10 +43,9 @@ public class StatsController {
 
         for (Player player : players) {
             LeagueV4ApiDto leagueResponse = null;
-            try{
+            try {
                 leagueResponse = statsService.getLeagueV4ApiDto(player.getEncryptedAccountId());
-            }
-            catch (Exception e){
+            } catch (Exception e) {
                 log.error("Error while updating statistics for player: " + player.getPlayerName());
             }
 
@@ -72,7 +71,7 @@ public class StatsController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    private StatsTableDto getStatsTableDto(String playerName, LeagueV4ApiDto leagueResponse, MatchHistoryDetailsDto matchHistoryDetailsDto, Player player){
+    private StatsTableDto getStatsTableDto(String playerName, LeagueV4ApiDto leagueResponse, MatchHistoryDetailsDto matchHistoryDetailsDto, Player player) {
         StatsTableDto statsTableDto = new StatsTableDto();
         statsTableDto.setPlayerName(playerName);
         statsTableDto.setWins(matchHistoryDetailsDto.getWins());
@@ -137,18 +136,22 @@ public class StatsController {
             case "PLATINUM":
                 sumOfLp = 1600;
                 break;
-            case "DIAMOND":
+            case "EMERALD":
                 sumOfLp = 2000;
                 break;
-            case "MASTER":
+            case "DIAMOND":
                 sumOfLp = 2400;
                 break;
-            case "GRANDMASTER":
+            case "MASTER":
                 sumOfLp = 2800;
                 break;
-            case "CHALLENGER":
+            case "GRANDMASTER":
                 sumOfLp = 3200;
                 break;
+            case "CHALLENGER":
+                sumOfLp = 3600;
+                break;
+
         }
 
         switch (leagueResponse.getRank()) {
