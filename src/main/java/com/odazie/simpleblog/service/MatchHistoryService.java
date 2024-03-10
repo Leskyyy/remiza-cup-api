@@ -331,4 +331,48 @@ public class MatchHistoryService {
         int multiplier = (int) Math.pow(10, 2); // Multiply by 100 to shift decimal two places
         return (float) (Math.round(num * multiplier) / (double) multiplier); // Round and divide back
     }
+
+    public void finishMilestone(Player player, int week) throws IOException, InterruptedException {
+        if (week == 1) {
+            if (player.getMilestoneWeekOne() == null) {
+                player.setMilestoneWeekOne(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 2) {
+            if (player.getMilestoneWeekTwo() == null) {
+                player.setMilestoneWeekTwo(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 3) {
+            if (player.getMilestoneWeekThree() == null) {
+                player.setMilestoneWeekThree(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 4) {
+            if (player.getMilestoneWeekFour() == null) {
+                player.setMilestoneWeekFour(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 5) {
+            if (player.getMilestoneWeekFive() == null) {
+                player.setMilestoneWeekFive(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 6) {
+            if (player.getMilestoneWeekSix() == null) {
+                player.setMilestoneWeekSix(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 7) {
+            if (player.getMilestoneWeekSeven() == null) {
+                player.setMilestoneWeekSeven(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        if (week == 8) {
+            if (player.getMilestoneWeekEight() == null) {
+                player.setMilestoneWeekEight(getCurrentRank(player.getEncryptedAccountId()));
+            }
+        }
+        playerRepository.save(player);
+    }
 }

@@ -100,11 +100,11 @@ public class DataLoader implements CommandLineRunner {
             playerRepository.save(player6);
         }
 
-        if(playerRepository.findByPlayerName("Kannistaris") == null) {
+        if(playerRepository.findByPlayerName("Quillynolerby") == null) {
             Player player6 = new Player();
-            player6.setPlayerName("Kannistaris");
-            player6.setEncryptedAccountId("Mn1DnsVzdMI5Jd4qwzd--3kjkf_blqy-x7maAO9WpOVhY6YCY9wUg5ch9Q");
-            player6.setPuuid("wCCvzeSvINKTUh02xmrESAsNhxIFGoeV0Kb4QcJLtQY9mDoAKdtvip3VpUWS-bq8yc-Ty9UO31myvw");
+            player6.setPlayerName("Quillynolerby");
+            player6.setEncryptedAccountId("2Gr1qgFdvSAwGTAMhKZgKPhi33kqC8S__PjnBw2Fn6zWVBsmPCEn1wBVAA");
+            player6.setPuuid("pcd7FlmUe59udruuOSMXnlEp8juPvP0-l6-1LOzihG0CQObjfCuhliunJlGMfjqx_xSDVSs8G3oVWg");
             player6.setActualName("Gonzo");
             player6.setMainAccountDivision("Diamond 4 42LP");
             player6.setImageLink("=IMAGE(\"https://cdn.discordapp.com/attachments/1212427418934050826/1212757970232803368/gonzo.png?ex=65f2ffe0&is=65e08ae0&hm=84a3e644bc10c4e0134bf091853e947c64a4c898b5bcff733d8487885d4d4918&\";4;80;80)");

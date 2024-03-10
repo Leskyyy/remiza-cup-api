@@ -71,6 +71,20 @@ public class StatsController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/finishMilestone/{week}")
+    public ResponseEntity<HttpStatus> finishMilestone(@PathVariable int week) {
+        List<Player> players = playerRepository.findAll();
+
+        for (Player player : players) {
+            try{
+                matchHistoryService.finishMilestone(player, week);
+            } catch (Exception e) {
+                log.error("Error while finishing milestone for player: " + player.getPlayerName());
+            }
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     private StatsTableDto getStatsTableDto(String playerName, LeagueV4ApiDto leagueResponse, MatchHistoryDetailsDto matchHistoryDetailsDto, Player player) {
         StatsTableDto statsTableDto = new StatsTableDto();
         statsTableDto.setPlayerName(playerName);
